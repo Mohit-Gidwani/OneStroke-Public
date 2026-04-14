@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Stroke – Puzzle Game</title>
+  <meta name="description" content="One Stroke — draw every edge exactly once. A minimalist puzzle game for Android."/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#0d0d0d;--surface:#161616;--border:#2a2a2a;--neon:#FF2D78;--text:#e8e8e8;--muted:#888;--radius:16px; }
+    body { background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column; }
+    .hero { text-align:center;padding:80px 24px 60px;background:radial-gradient(ellipse at 50% 0%, rgba(255,45,120,0.12) 0%, transparent 70%); }
+    .hero-logo { font-size:clamp(2.5rem,8vw,4rem);font-weight:900;letter-spacing:6px;background:linear-gradient(135deg,#FF2D78,#FF6B00,#FFE600);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1; }
+    .hero-sub { color:var(--muted);margin-top:12px;letter-spacing:2px;text-transform:uppercase;font-size:13px; }
+    .hero-desc { color:#aaa;max-width:520px;margin:24px auto 0;font-size:1rem; }
+    .badge-row { margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap; }
+    .badge { display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:opacity .2s; }
+    .badge:hover { opacity:.85; }
+    .badge-play { background:linear-gradient(135deg,#FF2D78,#FF6B00);color:#fff; }
+    .badge-outline { border:1px solid var(--border);color:var(--muted);background:var(--surface); }
+    .section { padding:48px 24px;max-width:900px;margin:0 auto;width:100%; }
+    .section-title { font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--neon);margin-bottom:28px;text-align:center; }
+    .features { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px; }
+    .feature { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px; }
+    .feature .icon { font-size:2rem;margin-bottom:12px; }
+    .feature h3 { font-size:1rem;font-weight:700;margin-bottom:6px; }
+    .feature p { color:var(--muted);font-size:14px; }
+    .worlds { display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px; }
+    .world-pill { padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:1px;border:1px solid; }
+    footer { margin-top:auto;border-top:1px solid var(--border);padding:28px 24px;text-align:center;color:var(--muted);font-size:13px; }
+    footer a { color:var(--neon);text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+    footer .links { display:flex;gap:20px;justify-content:center;margin-bottom:12px;flex-wrap:wrap; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-logo">ONE STROKE</div>
+    <div class="hero-sub">A Minimalist Puzzle Game</div>
+    <p class="hero-desc">Draw every edge exactly once without lifting your finger. 110 handcrafted puzzles across 5 neon worlds — plus picture levels like ⭐ stars, 🏠 houses, ❤️ hearts &amp; more.</p>
+    <div class="badge-row">
+      <a class="badge badge-play" href="https://play.google.com/store/apps/details?id=com.mohit.onestroke" target="_blank">▶ &nbsp; Get it on Google Play</a>
+      <a class="badge badge-outline" href="https://www.buymeacoffee.com/mohitgidwani" target="_blank">☕ Buy Me a Coffee</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Features</div>
+    <div class="features">
+      <div class="feature"><div class="icon">🧩</div><h3>110 Levels</h3><p>5 neon worlds × 22 levels each, including picture shape levels hidden in every world.</p></div>
+      <div class="feature"><div class="icon">⭐</div><h3>Star Rating</h3><p>Earn up to 3 stars — solve with zero undos for a perfect score.</p></div>
+      <div class="feature"><div class="icon">💡</div><h3>Hint System</h3><p>Highlights valid next moves. Earn hints through play or by watching ads.</p></div>
+      <div class="feature"><div class="icon">🎨</div><h3>Skins</h3><p>Unlock colourful node skins with coins earned through solving puzzles.</p></div>
+      <div class="feature"><div class="icon">🔊</div><h3>Sound &amp; Haptics</h3><p>Satisfying audio feedback for every move. Haptics optional.</p></div>
+      <div class="feature"><div class="icon">📴</div><h3>100% Offline</h3><p>Play anywhere — no internet needed except for ads.</p></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0; text-align:center">
+    <div class="section-title">5 Worlds to Conquer</div>
+    <div class="worlds">
+      <div class="world-pill" style="color:#FF2D78;border-color:#FF2D78">⚡ NEON DAWN</div>
+      <div class="world-pill" style="color:#00FFFF;border-color:#00FFFF">🌊 CYBER TIDE</div>
+      <div class="world-pill" style="color:#FFE600;border-color:#FFE600">🏆 GOLD RUSH</div>
+      <div class="world-pill" style="color:#FF6B00;border-color:#FF6B00">🔥 INFERNO</div>
+      <div class="world-pill" style="color:#BF00FF;border-color:#BF00FF">🌌 VOID BREACH</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://www.buymeacoffee.com/mohitgidwani" target="_blank">Buy Me a Coffee ☕</a>
+    </div>
+    <p>© 2025 Mohit Gidwani &nbsp;·&nbsp; One Stroke &nbsp;·&nbsp; Made with ❤️ in India</p>
+  </footer>
+</body>
+</html>
